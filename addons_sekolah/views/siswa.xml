@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <!-- List View -->
+        <record model="ir.ui.view" id="siswa_tree">
+            <field name="name">siswa.tree</field>
+            <field name="model">siswa</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="nis"/>
+                    <field name="kelas_id"/>
+                    <field name="name"/>
+                    <field name="jns_kelamin"/>
+                    <field name="tgl_lahir"/>
+                    <field name="agama"/>
+                    <field name="nm_ayah"/>
+                    <field name="nm_ibu"/>
+                </tree>
+            </field>
+        </record>
+        
+        <!-- Form View -->
+        <record model="ir.ui.view" id="siswa_form">
+            <field name="name">siswa.form</field>
+            <field name="model">siswa</field>
+            <field name="arch" type="xml">
+                <form>
+                    <header>
+                    </header>
+                    <sheet>
+                        <group>
+                            <group string="Data Siswa">
+                                <field name="nis"/>
+                                <field name="kelas_id"/>
+                                <field name="name"/>
+                            </group>
+                            <group string="Data Pribadi">
+                                <field name="jns_kelamin"/>
+                                <field name="tgl_lahir"/>
+                                <field name="agama"/>
+                                <field name="nm_ayah"/>
+                                <field name="nm_ibu"/>
+                                <field name="usia"/>
+                                <field name="alamat"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="siswa_action">
+            <field name="name">Siswa</field>
+            <field name="res_model">siswa</field>
+            <!-- <field name="view_type">form</field> -->
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem 
+            id="submenu_siswa"
+            name="Siswa"
+            parent="main_sekolah_menu"
+            action="siswa_action"
+        />
+
+    </data>
+</odoo>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <!-- Mata Pelajaran -->
+        <record id="ipa_1" model="mata.pelajaran">
+            <field name="name">Fisika</field>
+            <field name="jurusan">ipa</field>
+        </record>
+        <record id="ipa_2" model="mata.pelajaran">
+            <field name="name">Kimia</field>
+            <field name="jurusan">ipa</field>
+        </record>
+        <record id="ipa_3" model="mata.pelajaran">
+            <field name="name">Biologi</field>
+            <field name="jurusan">ipa</field>
+        </record>
+
+        <record id="ips_1" model="mata.pelajaran">
+            <field name="name">Sejarah</field>
+            <field name="jurusan">ips</field>
+        </record>
+        <record id="ips_2" model="mata.pelajaran">
+            <field name="name">Ekonomi</field>
+            <field name="jurusan">ips</field>
+        </record>
+        <record id="ips_3" model="mata.pelajaran">
+            <field name="name">Geografi</field>
+            <field name="jurusan">ips</field>
+        </record>
+        <record id="ips_4" model="mata.pelajaran">
+            <field name="name">Sosiologi</field>
+            <field name="jurusan">ips</field>
+        </record>
+
+        <record id="bahasa_1" model="mata.pelajaran">
+            <field name="name">B. Inggris</field>
+            <field name="jurusan">bahasa</field>
+        </record>
+        <record id="bahasa_2" model="mata.pelajaran">
+            <field name="name">B. Jepang</field>
+            <field name="jurusan">bahasa</field>
+        </record>
+        <record id="bahasa_3" model="mata.pelajaran">
+            <field name="name">B. Mandarin</field>
+            <field name="jurusan">bahasa</field>
+        </record>
+
+    </data>
+</odoo>

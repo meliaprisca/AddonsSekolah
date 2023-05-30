@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <!-- List View -->
+        <record model="ir.ui.view" id="kelas_tree">
+            <field name="name">kelas.tree</field>
+            <field name="model">kelas</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="guru_id"/>
+                </tree>
+            </field>
+        </record>
+        
+        <!-- Form View -->
+        <record model="ir.ui.view" id="kelas_form">
+            <field name="name">kelas.form</field>
+            <field name="model">kelas</field>
+            <field name="arch" type="xml">
+                <form>
+                    <header>
+                    </header>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name"/>
+                                <field name="guru_id"/>
+                            </group>
+                            <group>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Daftar Siswa">
+                                <field name="siswa_ids">
+                                    <tree string="Daftar Siswa" editable="bottom">
+                                        <field name="name"/>
+                                        <field name="nis"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="kelas_action">
+            <field name="name">Kelas</field>
+            <field name="res_model">kelas</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem 
+            id="submenu_kelas"
+            name="Kelas"
+            parent="main_sekolah_menu"
+            action="kelas_action"
+        />
+
+    </data>
+</odoo>
